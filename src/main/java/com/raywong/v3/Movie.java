@@ -23,39 +23,10 @@ public class Movie {
         this.title = title;
         setPriceCode(priceCode);
     }
-    
-    
-    double getCharge(int daysRented) {
-        double thisAmount = 0;
-        switch (getPriceCode()){
-            case Movie.REGULAR:
-                thisAmount += 2;
-                if (daysRented > 2){
-                    thisAmount += (daysRented - 2) * 1.5;
-                }
-                break;
-            case Movie.NEW_RELEASE:
-                thisAmount += daysRented * 3;
-                break;
-            case Movie.CHILDRENS:
-                thisAmount += 1.5;
-                if (daysRented > 3){
-                    thisAmount += (daysRented - 3) * 1.5;
-                }
-                break;
-        }
-        return thisAmount;
-    }
 
-    int getFrequentRenterPoints(int daysRented) {
-        if ((getPriceCode() == Movie.NEW_RELEASE) && daysRented > 1){
-            return 2;
-
-        } else {
-            return 1;
-        }
+    public int getFrequentRenterPoints(int daysRented){
+        return price.getFrequentRenterPoints(daysRented);
     }
-    
 
     public String getTitle() {
         return title;
@@ -66,7 +37,11 @@ public class Movie {
     }
 
     public int getPriceCode() {
-        return priceCode;
+        return price.getPriceCode();
+    }
+
+    public double getCharge(int daysRented){
+        return price.getCharge(daysRented);
     }
 
     public void setPriceCode(int priceCode) {
