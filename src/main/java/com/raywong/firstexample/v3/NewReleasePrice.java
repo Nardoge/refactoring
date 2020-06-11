@@ -1,6 +1,4 @@
-package com.raywong.v3;
-
-import com.raywong.v3.Price;
+package com.raywong.firstexample.v3;
 
 /**
  * @Description TODO

@@ -7,4 +7,4 @@
  *     5.getFrequentRenterPoints 方法从 Movie抽离到 Price 中。
  *     6.将计算积分的行为，留一个在默认，然后通过子类覆盖。
  */
-package com.raywong.v3;
+package com.raywong.firstexample.v3;

@@ -1,4 +1,4 @@
-package com.raywong.v1;
+package com.raywong.firstexample.v2;
 
 /**
  * @Description 电影类

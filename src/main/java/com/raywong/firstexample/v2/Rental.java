@@ -1,4 +1,4 @@
-package com.raywong.v2;
+package com.raywong.firstexample.v2;
 
 /**
  * @Description 租赁

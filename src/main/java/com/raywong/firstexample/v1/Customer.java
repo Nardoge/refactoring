@@ -1,4 +1,4 @@
-package com.raywong.v1;
+package com.raywong.firstexample.v1;
 
 import java.util.Enumeration;
 import java.util.Vector;

@@ -1,4 +1,4 @@
-package com.raywong.v1;
+package com.raywong.firstexample.v3;
 
 /**
  * @Description 租赁
@@ -21,5 +21,13 @@ public class Rental {
 
     public int getDaysRented() {
         return daysRented;
+    }
+
+    double getCharge(){
+        return movie.getCharge(daysRented);
+    }
+
+    int getFrequentRenterPoints() {
+        return movie.getFrequentRenterPoints(daysRented);
     }
 }

@@ -1,4 +1,4 @@
-package com.raywong.v3;
+package com.raywong.firstexample.v2;
 
 import java.util.Enumeration;
 import java.util.Vector;
@@ -34,18 +34,6 @@ public class Customer {
         }
         result += "Amount owed is " + String.valueOf(getTotalCharge()) + "\n";
         result += "You earned " + String.valueOf(getTotalFrequentRenterPoints()) + "frequent renter points";
-        return result;
-    }
-
-    public String htmlStatement(){
-        Enumeration rentalEnums = rentals.elements();
-        String result = "<H1>Rental Record for <EM>" + getName() + "</EM><H1><P>\n";
-        while (rentalEnums.hasMoreElements()){
-            Rental rental = (Rental) rentalEnums.nextElement();
-            result += "\t" + rental.getMovie().getTitle() + "\t" + String.valueOf(rental.getCharge()) + "<BR>\n";
-        }
-        result += "<P>You owed is <EM>" + String.valueOf(getTotalCharge()) + "\n";
-        result += "<P>You earned " + String.valueOf(getTotalFrequentRenterPoints()) + "frequent renter points</EM><P>";
         return result;
     }
 
